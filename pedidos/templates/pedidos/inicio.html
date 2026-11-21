@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block titulo %}{{ titulo }}{% endblock %}
+{% block contenido %}
+    <h1>{{ titulo }}</h1>
+    <ul>
+        {% for pedido in pedidos %}
+            <li>Cliente: {{ pedido.cliente }}, Pedido: {{ pedido.pieza }} - Cantidad: {{ pedido.cantidad }} und</li>
+        {% empty %}
+            <li>No hay pedidos pendientes.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
