@@ -1,7 +1,6 @@
 from django.shortcuts import render
 
 
-# Create your views here.
 def inicio(request):
     contexto = {"titulo": "Inventario de Taller VHAJ"}
 
