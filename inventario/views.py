@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from .models import Material
+
 
 def inicio(request):
     contexto = {"titulo": "Inventario de Taller VHAJ"}
@@ -8,11 +10,7 @@ def inicio(request):
 
 
 def materiales(request):
-    lista = [
-        {"nombre": "PLA", "color": "Negro", "cantidad": 1000},
-        {"nombre": "PETG", "color": "Blanco", "cantidad": 1000},
-        {"nombre": "TPU", "color": "Rojo", "cantidad": 1000},
-    ]
+    lista = Material.objects.order_by("nombre", "color")
     contexto = {"titulo": "Materiales del taller", "materiales": lista}
 
     return render(request, "inventario/materiales.html", contexto)
