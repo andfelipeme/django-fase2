@@ -6,7 +6,7 @@ from .models import Pedido
 class PedidoAdmin(admin.ModelAdmin):
     list_display = ["cliente", "pieza", "material", "cantidad", "fecha"]
     search_fields = ["cliente", "pieza", "material__nombre"]
-    list_filter = ["fecha", "material__nombre"]
+    list_filter = ["fecha", "material"]
     readonly_fields = ["fecha"]
 
 

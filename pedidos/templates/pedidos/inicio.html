@@ -4,7 +4,7 @@
     <h1>{{ titulo }}</h1>
     <ul>
         {% for pedido in pedidos %}
-            <li>Cliente: {{ pedido.cliente }}, Pieza: {{ pedido.pieza }} - Material: {{pedido.material}} - Cantidad: {{ pedido.cantidad }} und - Fecha: {{ pedido.fecha }}</li>
+            <li>Cliente: {{ pedido.cliente }}, Pieza: {{ pedido.pieza }} - Material: {{ pedido.material }} - Cantidad: {{ pedido.cantidad }} und - Fecha: {{ pedido.fecha }}</li>
         {% empty %}
             <li>No hay pedidos pendientes.</li>
         {% endfor %}
