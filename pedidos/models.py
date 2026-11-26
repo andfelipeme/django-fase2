@@ -4,6 +4,7 @@ from django.db import models
 class Pedido(models.Model):
     cliente = models.CharField(max_length=100)
     pieza = models.CharField(max_length=100)
+    material = models.ForeignKey("inventario.Material", on_delete=models.PROTECT)
     cantidad = models.PositiveIntegerField(default=1)
     fecha = models.DateTimeField(auto_now_add=True)
 

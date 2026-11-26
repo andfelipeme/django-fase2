@@ -9,5 +9,8 @@ class Material(models.Model):
     class Meta:
         verbose_name_plural = "materiales"
 
+    def cantidad_pedidos(self):
+        return self.pedido_set.count()
+
     def __str__(self):
         return f"{self.nombre} {self.color}"

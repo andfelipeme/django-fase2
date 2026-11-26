@@ -5,7 +5,7 @@
     <h1>{{ titulo }}</h1>
     <ul>
         {% for material in materiales %}
-            <li>{{ material.nombre }} {{ material.color }} - {{ material.cantidad }} g</li>
+            <li>{{ material.nombre }} {{ material.color }} - {{ material.cantidad }} g - Pedidos: {{ material.cantidad_pedidos }} </li>
         {% empty %}
             <li>No hay materiales registrados.</li>
         {% endfor %}
